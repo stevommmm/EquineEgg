@@ -1,0 +1,16 @@
+name: EquineEgg
+main: com.c45y.EquineEgg.EquineEgg
+version: 0.1
+permissions:
+    EquineEgg.user:
+        description: A player
+        default: true
+    EquineEgg.op:
+        description: A admin type player
+        default: op
+commands:
+  ee:
+    description: Basic command
+    permission: EquineEgg.user
+    usage: |
+           /ee: [args]
