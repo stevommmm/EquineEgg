@@ -50,7 +50,7 @@ public class EquineEgg extends JavaPlugin implements Listener {
         return free;
     }
 
-    @EventHandler(priority = EventPriority.HIGHEST, ignoreCancelled = true)
+    @EventHandler(priority = EventPriority.LOWEST, ignoreCancelled = true)
     public void onPlayerInteractEntity(PlayerInteractEntityEvent event) {
         if (!event.getPlayer().isSneaking() || event.getRightClicked().getType() != EntityType.HORSE) {
             return;
@@ -84,7 +84,7 @@ public class EquineEgg extends JavaPlugin implements Listener {
         horse.remove();
         event.getPlayer().getInventory().addItem(egg);
     }
-     @EventHandler(priority = EventPriority.HIGHEST, ignoreCancelled = true)
+     @EventHandler(priority = EventPriority.LOWEST, ignoreCancelled = true)
     public void onPlayerInteract(PlayerInteractEvent event) {
         if (event.getAction() != Action.RIGHT_CLICK_BLOCK || event.getMaterial() != Material.MONSTER_EGG) {
             return;
@@ -123,8 +123,8 @@ public class EquineEgg extends JavaPlugin implements Listener {
                 horse.setStyle(Style.valueOf(lore.split(": ")[1]));
             }
         }
-        
-        // Remove the egg from the player inventory
+
+        // Remove the egg from the player inventory, should probably check the entity exists here
         event.getPlayer().getInventory().remove(event.getItem());
                 
     }

@@ -2,4 +2,4 @@
 /bin/
 .classpath
 .project
-/resources/craftbukkit.jar
+/resources/*.jar

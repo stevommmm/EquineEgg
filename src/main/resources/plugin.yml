@@ -1,6 +1,6 @@
 name: EquineEgg
 main: com.c45y.EquineEgg.EquineEgg
-version: 0.1
+version: 1.1
 permissions:
     EquineEgg.user:
         description: A player
